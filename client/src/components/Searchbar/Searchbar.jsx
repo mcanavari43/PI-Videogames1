@@ -19,9 +19,8 @@ export default function SearchBar({ setCurrentPage, setHeader }) {
       console.log("Error");
     } else {
       dispatch(getGamesByName(name));
-      setName("");
       setHeader(`Search Results for ${e.target.value}`);
-      dispatch(getGamesByName(name));
+      setName("");
       setCurrentPage(1);
     }
   }
