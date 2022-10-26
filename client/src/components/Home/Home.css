@@ -1,58 +1,12 @@
-/* body{
-    background-color: black;
-    
-}
 
-
-.header{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    gap: 20px;
-}
-.containerCards{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    border: none;
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    gap: 20px;
-}
-
-.cards {
-    color: #fff;
-    width: 220px;
-    min-height: 350px;
-    background: hsla(0,0%,100%,.15);
-    box-shadow: 27px 18px 21px 0 rgb(22 1 22 / 82%);
-    border-radius: 30px;
-    letter-spacing: 4px;
-    display: grid;
-    border: 1px solid #fff;
-    align-items: center;
-
-}
-.sort{
-    background-color: #bbc;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 30px;
-    align-items: center;
-    padding: 3.5px;
-} */
 body{
     background-image: url(https://img.freepik.com/vector-gratis/conjunto-varios-elementos-planos-hud-moderno_74855-7920.jpg?w=900&t=st=1663097759~exp=1663098359~hmac=1052580ea63d921878d21ac7c72a603c9a3a5d6c5a22c5f19744dd47beb55b76);
     justify-items: stretch;
     color: #ffff;
     background-size: contain;
     object-fit: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 .header {
     background-image: url(https://img.freepik.com/vector-gratis/conjunto-varios-elementos-planos-hud-moderno_74855-7920.jpg?w=900&t=st=1663097759~exp=1663098359~hmac=1052580ea63d921878d21ac7c72a603c9a3a5d6c5a22c5f19744dd47beb55b76);
@@ -60,6 +14,7 @@ body{
     color: #ffff;
     background-size: contain;
     object-fit: cover;
+    margin-top: 50px;
 }
 a{
     color: black;
@@ -67,10 +22,12 @@ a{
 a:visited{
     text-decoration: none;
 }
+
+
 .sort{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     opacity: 92%;;
     padding: 2px;
@@ -83,36 +40,10 @@ a:visited{
     font-weight: bold;
     
 }
-/* .sort select{
-    appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-    display: inline-block;
-	width: 100%;
-	cursor: pointer;
-  	padding: 7px 10px;
-  	height: 42px;
-  	outline: 0; 
-  	border: 0;
-	border-radius: 0;
-	background: #f0f0f0;
-	color: #7b7b7b;
-	font-size: 1em;
-	color: #999;
-	font-family: 
-	'Quicksand', sans-serif;
-	border:2px solid rgba(0,0,0,0.2);
-    border-radius: 12px;
-    position: relative;
-    transition: all 0.25s ease;
-    max-width: 250px;
-	position: relative;
-    
-} */
 
 .sort .rating {
     display: flex;
-    background-color: #000;
+    
     opacity: 93%;
     flex-direction: column;
     border-radius: 20%;
@@ -125,7 +56,7 @@ a:visited{
 }
 .sort .container-options {
     display: flex;
-    background-color: black;
+  
     opacity: 93%;
     flex-direction: column;
     align-items: center;
@@ -143,41 +74,21 @@ a:visited{
 }
 
 .containerCards div:hover {
-    border: none;
+    transform: scale(1.1);
+    transition: 2s;
+    cursor: pointer;
 }
 
 .paginado{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
-
-/* .btnCreate{
-    width: 150px;
-    padding: 10px;
-    background-color: #776cf0;
-    border-radius: 20px;
-    font-weight: bold;
-}
-.btnCreate:hover{
-    background-color: black;
-    color: #fff;
-}
-.btnReset{
-    width: 150px;
-    padding: 10px;
-    background-color: #776cf0;
-    border-radius: 20px;
-    font-weight: bold;
-}
-.btnReset:hover{
-    background-color: black;
-    color: #fff;
-} */
 
 .filter{
-    background-color: black;
+    
     opacity: 93%;
     border-radius: 30px;
     padding: 2px;
@@ -185,25 +96,6 @@ a:visited{
     justify-content: center;
     
 }
-
-
-/* .btnCreate:hover{
-    background: #B1E8CD;
-    cursor: pointer;
-    color: #fff;
-}
-.btnReset{
-    width: 150px;
-    padding: 10px;
-    background-color: #776cf0;
-    border-radius: 20px;
-    font-weight: bold;
-}
-.btnReset:hover{
-    background: #B1E8CD;
-    color: #fff;
-    cursor: pointer;
-} */
 
 .origin select{
     appearance: none;
@@ -215,14 +107,14 @@ a:visited{
 }
 .origin select{
     display: inline-block;
-	width: 120px;
+	width: auto;
 	cursor: pointer;
   	padding: 7px 10px 10px;
-  	height: 42px;
+  	height: 45px;
   	outline: 0; 
   	border: 0;
 	border-radius: 0;
-	background-color: rgba(240, 224, 0, 0.993);
+	background-color: rgba(172, 171, 161, 0.993);
 	color: #7b7b7b;
 	font-size: 25px;
 	color: #fff;
@@ -231,20 +123,21 @@ a:visited{
     border-radius: 12px;
     position: relative;
     transition: all 0.25s ease;
+    margin: 1px;
 }
 .origin select:hover{
     background: #000;
 }
 .rating select{
     display: inline-block;
-	width: 120px;
+	width: auto;
 	cursor: pointer;
   	padding: 7px 10px 10px;
-  	height: 42px;
+  	height: auto;
   	outline: 0; 
   	border: 0;
 	border-radius: 0;
-	background-color: rgba(240, 224, 0, 0.993);
+	background-color: rgba(172, 171, 161, 0.993);
 	color: #7b7b7b;
 	font-size: 25px;
 	color: #fff;
@@ -253,6 +146,7 @@ a:visited{
     border-radius: 12px;
     position: relative;
     transition: all 0.25s ease;
+    margin: 1px;
 }
 .rating select:hover{
     background: #000;
@@ -268,14 +162,14 @@ a:visited{
 
 .container-options button{
     display: inline-block;
-	width: 230px;
+	width: auto;
 	cursor: pointer;
   	padding: 7px 10px 10px;
-  	height: 42px;
+  	height: auto;
   	outline: 0; 
   	border: 0;
 	border-radius: 0;
-	background-color: rgba(240, 224, 0, 0.993);
+	background-color: rgba(172, 171, 161, 0.993);
 	color: #7b7b7b;
 	font-size: 25px;
 	color: #fff;
@@ -284,6 +178,7 @@ a:visited{
     border-radius: 12px;
     position: relative;
     transition: all 0.25s ease;
+    margin: 1px;
 }
 .container-options button:hover{
     background: #000;
@@ -295,4 +190,35 @@ a:visited{
 }
 .container-options button::-ms-expand{
     display: none;
+}
+.filter select{
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.filter select::-ms-expand{
+    display: none;
+}
+.filter select{
+    display: inline-block;
+	width: auto;
+	cursor: pointer;
+  	padding: 7px 10px 10px;
+  	height: auto;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background-color: rgba(172, 171, 161, 0.993);
+	color: #7b7b7b;
+	font-size: 25px;
+	color: #fff;
+	font-family: 
+	'Quicksand', sans-serif;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+    margin: 1px;
+}
+.filter select:hover{
+    background: #000;
 }

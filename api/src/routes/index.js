@@ -77,11 +77,7 @@ router.get('/videogame/:id', async (req,res) => {
             genres: data.genres.map(g => g.name).join(','),
             platforms : data.platforms.map(p => p.platform.name).join(',')
         }]
-      
         res.send(gameId)
-        // gameId.length ?
-        // res.send(gameId) :
-        // res.send(['Not find any game by Id'])
     } else {
         let gameFounded = await Videogames.findByPk(id, {
             include: [{

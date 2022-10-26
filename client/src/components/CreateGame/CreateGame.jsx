@@ -34,11 +34,7 @@ const isValidUrl = (url) => {
         } else if (input.rating > 5 || input.rating < 0) {
             errors.rating = "Rating must range between 0 to 5"
         }
-        if(!input.released) {
-            errors.released = "Date of release is required"
-        }else if(input.released.length < 10) {
-            errors.released = "Date of release is to long"
-        }if(!input.image) {
+        if(!input.image) {
             errors.image = "Image URL is required"
         } else if (!isValidUrl(input.image)){
             errors.image = "Not validated as URL"
@@ -97,7 +93,7 @@ const isValidUrl = (url) => {
             }));
     
         }
-    
+        // METODO SET
         function handleSubmit(e) {
             e.preventDefault();
             if (!input.name.trim()) {
@@ -112,7 +108,11 @@ const isValidUrl = (url) => {
                 alert("Please insert at least one genre")
             } else if (input.genres.length === 0) {
                 alert("Please use correctly genre")
-            } else {
+            }
+            // else if (input.genres.name == input.genres.name){
+            //     alert("Genre duplicate")
+            // 
+             else {
             dispatch(postNewGame(input))
             alert('Game created successfully!')
             setInput({
@@ -146,7 +146,7 @@ const isValidUrl = (url) => {
                 <div className="container1">
                     <div className="container2">
                         <Link to='/home'>
-                            <p>Return</p>
+                            <h1>Return home</h1>
                         </Link>
                     </div>
                     <div className="container2">
@@ -155,19 +155,26 @@ const isValidUrl = (url) => {
                 </div>
                 <div className="containerForm">
                     <form id="form" onSubmit={e => handleSubmit(e)}>
+                        <div>
                         <label>Name:</label>
                         <input required="name" className={errors.name && 'danger'} type='text' value={input.name} name='name' placeholder="Name" onChange={e => handleChange(e)}/>
+                        {errors.name && <p className="error-controlado"> {errors.name}</p>}
+                        </div>
+                        <div>
                         <label>Rating: </label>
-                        <input className={errors.rating     && 'danger'} type='text' value={input.rating} name='rating' placeholder="From 0 to 5" onChange={e => handleChange(e)}/>
+                        <input required="rating" className={errors.rating     && 'danger'} type='text' value={input.rating} name='rating' placeholder="From 0 to 5" onChange={e => handleChange(e)}/>
+                        {errors.rating && <p className="error-controlado"> {errors.rating}</p>}
+                        </div>
                         <label>Image URL:</label>
                         <input className={errors.image && 'danger'} type='text' value={input.image} name='image' placeholder="URL" onChange={e => handleChange(e)}/>
                         <label>Released: </label>
-                        <input className={errors.released && 'danger'} type='date' value={input.released} name='released' placeholder="
-                        When it was created" onChange={e => handleChange(e)}/>
+                        <input className={errors.released && 'danger'} type='date-now' value={input.released} name='released' placeholder="
+                        When it was created" onChange={e => handleChange(e)}/>  
                         <label>Description: </label>
                         <textarea className={errors.description && 'danger'} type='text' value={input.description} name='description' placeholder="About game..." onChange={e => handleChange(e)}/>
-                        <label>Genres: </label>
-                        <select className={errors.genres && 'danger'} name='genres' onChange={e => handleSelect(e)}>
+                        {errors.description && <p className="error-controlado"> {errors.description}</p>}
+                        <label>Select Genres </label>
+                        <select required="genre" className={errors.genres && 'danger'} name='genres' value='genres' onChange={e => handleSelect(e)}>
                         <option hidden value="genre">Genres</option>
                         {
                             allGenres?.map(e => (

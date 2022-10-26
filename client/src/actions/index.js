@@ -76,10 +76,10 @@ export function getGamesByName(name) {
 export function getDetail(id) {
    try{
        return async function(dispatch) {
-           var json = await axios.get(`http://localhost:3001/videogame/${id}`)
+           var detail = await axios.get(`http://localhost:3001/videogame/${id}`)
            return dispatch ({
                type: GET_GAME_DETAIL,
-               payload: json.data
+               payload: detail.data
            })
        }
    } catch(error){

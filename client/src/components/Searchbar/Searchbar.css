@@ -7,22 +7,27 @@
     justify-content: center;
 }
 .input-search{
+    font-size: 20px;
     align-items: center;
-    width: 155px;
+    width: 240px;
     height: 40px;
     position: relative;
     justify-content: center;
     opacity: 92%;
     background-color: #fff;
+    color: black;
 }
 .button-search{
     border-radius: 120px;
+    width: 120px;
     height: 46px;
     padding: 15px;
 }
 .button-search:hover{
     cursor: pointer;
     border-radius: 120px;
+    border-width: 1px;
+    border: #000;
 }
 .img-search{
     height: 100px;

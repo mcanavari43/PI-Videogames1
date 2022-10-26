@@ -15,66 +15,66 @@ useEffect(() => {
     return () =>{
         dispatch(getClean())
     }
-},[dispatch])
+},[props.match.params.id,dispatch])
                
 const DetailState = useSelector((state) => state.gameDetail)
 return (
-    <div>
+    <div className="detailContainer">
         <div>
             <Link to='/home'>
-                <p>Return Home</p>
+                <h1>Return Home</h1>
             </Link>
         </div>              
         {             
             DetailState.length > 0 ?
-            <div>
+            <div className="allbox">
                 <div>
                     <header>{`Details of "${DetailState[0].name}"`}</header>
                 </div>   
-                <div>       
-                    <div>
+                <div className="detailContainer">       
+                    
                         {DetailState[0].image ?
                         <img src={DetailState[0].image} alt="Not found" width='100%' height='520px'/> :
                         <img src="" alt="Not found" width="" height=""/>
                         }
-                        <div>
-                            <div>
+                        
+                                <div className="">
+                    
                                 <h1>Genres: </h1>
                                 {
                                     DetailState[0].genres.length ?
-                                <h3>{DetailState[0].genres.name ?
+                                <p>{DetailState[0].genres.name ?
                                     DetailState[0].genres : 
                                     DetailState[0].genres}
-                                        </h3> :
-                                        <h3>No genres assigned to game</h3>
+                                        </p> :
+                                        <p>No genres assigned to game</p>
                                 }
-                            </div>
-                            <div>
+                            
                                 <h1>Platforms: </h1>
                                 {DetailState[0].platforms.length ?
-                                <h3>{   DetailState[0].platforms.name ? 
+                                <p>{   DetailState[0].platforms.name ? 
                                     DetailState[0].platforms :
                                     DetailState[0].platforms}
-                                </h3> : <h3>No platforms registered</h3>
+                                </p> : <p>No platforms registered</p>
                                 }   
-                            </div>
-                        </div>          
-                    </div>
-                </div>
-                    <div>
-                        <h1>About the game:</h1>
-                        <h1>{DetailState[0].description.replace(/<\/?[^>]+>/gi, '').replace(/&#39;/g, "'")}</h1>
-                        <div>
-                            <div>
+                                  
+                    
+                    
+                            
                                 <h1>Released: </h1>
-                                <h3>{DetailState[0].released}</h3>
-                            </div>
-                            <div>
+                                <p>{DetailState[0].released}</p>
+                            
+                            
                                 <h1>Rating:</h1>
-                                <h3>{`★ ${DetailState[0].rating}`}</h3>
+                                <p>{`★ ${DetailState[0].rating}`}</p>
                             </div>
-                        </div>
-                    </div>
+                            
+                </div>
+                        
+                        <h1>About the game:</h1>
+                        <p>{DetailState[0].description.replace(/<\/?[^>]+>/gi, '').replace(/&#39;/g, "'")}</p>
+                        
+                    
             </div> : <p>Loading...</p> 
         }
     </div>

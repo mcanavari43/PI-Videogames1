@@ -2,19 +2,38 @@
     background-image: url('https://img.freepik.com/vector-gratis/conjunto-objetos-relacionados-videojuegos-neon-estilo-lineal_24908-58670.jpg?w=1060&t=st=1663025386~exp=1663025986~hmac=414af3b38f2b0d965679a83ef29a9be3471768d94c0b26372bb8bb38f1c8a6c4');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: inherit; */
     width: auto;
     height: 100vh;
-    min-height: 100%;
-    overflow: hidden;
+    /* min-height: 100%; */
+    overflow-y: hidden;
+    overflow-x: none;
     margin: auto;
     display: flex;
     white-space: none;  
     justify-content: center;
     align-items: start;
+    
 }
-.miniContainer {
+/* .miniContainer {
     background-color: #3cc2;
     display: block;
+} */
+::-webkit-scrollbar{
+    display: none;
+}
+.boxLanding {
+    background: yellow;
+    font-size: 25px;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 25px;
+    opacity: 80%;
 }
 
+.boxLanding:hover{
+    background-color: black;
+    color: #fff;
+}

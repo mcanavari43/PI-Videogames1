@@ -5,8 +5,14 @@ import Detail from './components/Detail/Detail';
 import CreateGame from './components/CreateGame/CreateGame'
 
 import './App.css';
+import { useEffect,useState } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+  },[])
   return (
     <div className="App">
       <Switch>
