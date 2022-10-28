@@ -15,6 +15,13 @@
     align-items: start;
     
 }
+.tittleLanding{
+    justify-items: stretch;
+    color: #ffff;
+    background-size: contain;
+    object-fit: cover;
+    margin-top: 50px;
+}
 /* .miniContainer {
     background-color: #3cc2;
     display: block;
