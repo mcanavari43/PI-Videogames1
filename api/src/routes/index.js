@@ -11,6 +11,9 @@ const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+router.get('/', function (req,res){
+    res.send("Prueba JEJE")
+})
 router.get('/videogames', async (req,res) => {
     const {name} = req.query
     let allGames = await getAllGames()
