@@ -15,7 +15,6 @@
 .allbox{
     display: flex;
     background-color: #000;
-    opacity: 85%;
     overflow: hidden;
     overflow-x: hidden;
     justify-content: center;
