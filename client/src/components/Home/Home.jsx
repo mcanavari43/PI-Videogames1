@@ -20,6 +20,7 @@ export default function Home() {
   let allGames = useSelector((state) => state.games);
   const allGenres = useSelector((state) => state.genres);
   const [currentPage, setCurrentPage] = useState(1);
+  const loading = useSelector((state) => state.loading);
   const [header, setHeader] = useState("Explore all the Games");
   const [order, setOrder] = useState("Watch games");
   const [gamesPerPage, setGamesPerPage] = useState(15);
@@ -32,8 +33,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    dispatch(getAllGames());
     dispatch(getAllGenres());
+    dispatch(getAllGames());
   }, [dispatch]);
   // const gameDetails = useSelector(state => state.gameDetail)
   // useEffect( () => {
@@ -158,23 +159,25 @@ export default function Home() {
           />
         </div>
         <div className="containerCards">
-          {currentGames?.map((e) => {
-            return (
-              <div className="cards" key={e.id}>
-                {/* <Link to={'/home/' + e.id}> */}
+          {loading && <h1>Loading...</h1>}
+          {!loading &&
+            currentGames?.map((e) => {
+              return (
+                <div className="cards" key={e.id}>
+                  {/* <Link to={'/home/' + e.id}> */}
 
-                <Card
-                  name={e.name}
-                  image={e.image}
-                  rating={e.rating}
-                  genres={e.genres}
-                  id={e.id}
-                />
+                  <Card
+                    name={e.name}
+                    image={e.image}
+                    rating={e.rating}
+                    genres={e.genres}
+                    id={e.id}
+                  />
 
-                {/* </Link> */}
-              </div>
-            );
-          })}
+                  {/* </Link> */}
+                </div>
+              );
+            })}
         </div>
       </div>
       <div className="paginado">

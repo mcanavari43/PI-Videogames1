@@ -11,6 +11,8 @@ export const POST_GAME = 'POST_GAME'
 export const GET_CLEAN = "GET_CLEAN"
 export const CLEAN_GENRE = "CLEAN_GENRE"
 export const CLEAN_GAMES = "CLEAN_GAMES"
+export const LOADING = "LOADING"
+export const LOADING_FINISH = "LOADING_FINISH"
 
 export function getAllGames(){
     try{
@@ -58,11 +60,15 @@ export function getAllGames(){
 export function getGamesByName(name) {
     return async function (dispatch){
         try{
-            var json = await axios.get(`/videogames?name=${name}`)
-            return dispatch({
-                type: GET_GAMES_BY_NAME,
-                payload: json.data
+            dispatch({type: LOADING})
+            axios.get(`/videogames?name=${name}`).then(data => {
+                dispatch({type: LOADING_FINISH})
+                return dispatch({
+                    type: GET_GAMES_BY_NAME,
+                    payload: data.data
+                })
             })
+
         } catch (error){
             console.log(error)
             return dispatch({

@@ -10,7 +10,9 @@ import {
     POST_GAME,
     GET_CLEAN,
     CLEAN_GENRE,
-    CLEAN_GAMES
+    CLEAN_GAMES,
+    LOADING,
+    LOADING_FINISH
 } from '../actions'
 
 
@@ -19,7 +21,8 @@ const initialState = {
     allGames: [],
     genres: [],
     platforms: [],
-    gameDetail: []
+    gameDetail: [],
+    loading: false
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -59,6 +62,16 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 games: allFiltered
                         }
+            case LOADING:
+                return {
+                                ...state,
+                                loading: true
+                            }
+                            case LOADING_FINISH:
+                                return {
+                                    ...state,
+                                    loading: false
+                                }  
         case GET_GAMES_BY_NAME:
             return {
                 ...state,
@@ -91,7 +104,7 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 games: aux
-            }
+            }  
         case SORT_ALPHABETICALLY:
             let sort = action.payload === 'A - Z' ?
             state.games.sort((a,b) => {
