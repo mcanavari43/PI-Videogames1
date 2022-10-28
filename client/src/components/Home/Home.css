@@ -43,8 +43,6 @@ a:visited{
 
 .sort .rating {
     display: flex;
-    
-    opacity: 93%;
     flex-direction: column;
     border-radius: 20%;
 }
@@ -56,8 +54,6 @@ a:visited{
 }
 .sort .container-options {
     display: flex;
-  
-    opacity: 93%;
     flex-direction: column;
     align-items: center;
     border-radius: 10%;
@@ -88,8 +84,6 @@ a:visited{
 }
 
 .filter{
-    
-    opacity: 93%;
     border-radius: 30px;
     padding: 2px;
     align-items: center;
