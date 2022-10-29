@@ -30,7 +30,7 @@ export function getAllGames(){
  export function getAllGenres(){
      try{
     return async function(dispatch){
-        const json = await axios.get('/genres'); 
+        let json = await axios.get('/genres'); 
                 return dispatch({
                 type: GET_ALL_GENRES,
                 payload: json.data
