@@ -160,24 +160,23 @@ export default function Home() {
         </div>
         <div className="containerCards">
           {loading && <h1>Loading...</h1>}
-          {!loading &&
-            currentGames?.map((e) => {
-              return (
-                <div className="cards" key={e.id}>
-                  {/* <Link to={'/home/' + e.id}> */}
+          {currentGames?.map((e) => {
+            return (
+              <div className="cards" key={e.id}>
+                {/* <Link to={'/home/' + e.id}> */}
 
-                  <Card
-                    name={e.name}
-                    image={e.image}
-                    rating={e.rating}
-                    genres={e.genres}
-                    id={e.id}
-                  />
+                <Card
+                  name={e.name}
+                  image={e.image}
+                  rating={e.rating}
+                  genres={e.genres}
+                  id={e.id}
+                />
 
-                  {/* </Link> */}
-                </div>
-              );
-            })}
+                {/* </Link> */}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="paginado">
