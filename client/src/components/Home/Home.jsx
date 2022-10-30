@@ -80,6 +80,7 @@ export default function Home() {
   return (
     <div className="header">
       <h1>{header}</h1>
+      {loading && <h1 className="spinner2"></h1>}
       <SearchBar
         className="searchbar"
         setHeader={setHeader}
@@ -159,7 +160,6 @@ export default function Home() {
           />
         </div>
         <div className="containerCards">
-          {loading && <h1>Loading...</h1>}
           {currentGames?.map((e) => {
             return (
               <div className="cards" key={e.id}>

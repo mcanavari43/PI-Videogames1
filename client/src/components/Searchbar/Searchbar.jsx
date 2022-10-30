@@ -31,7 +31,7 @@ export default function SearchBar({ setCurrentPage, setHeader }) {
   }
   const gameState = useSelector((state) => state.allGames);
   return (
-    <div>
+    <div className="container-searchbar">
       {gameState.length > 0 ? (
         <div className="container-searchbar">
           <input
@@ -47,11 +47,11 @@ export default function SearchBar({ setCurrentPage, setHeader }) {
             type="submit"
             onClick={(e) => handleOnSubmit(e)}
           >
-            Enter
+            Search
           </button>
         </div>
       ) : (
-        <p>Loading...</p>
+        <h1 className="spinner"></h1>
       )}
     </div>
   );

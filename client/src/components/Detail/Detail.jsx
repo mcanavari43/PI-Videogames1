@@ -83,7 +83,7 @@ export default function Detail(props) {
           </p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <h1 className="spinner"></h1>
       )}
     </div>
   );
