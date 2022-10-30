@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getGamesByName, getAllGames } from "../../actions";
+import { getGamesByName } from "../../actions";
 import "./Searchbar.css";
 
 export default function SearchBar({ setCurrentPage, setHeader }) {

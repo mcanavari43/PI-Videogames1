@@ -63,7 +63,7 @@ const rootReducer = (state = initialState, action) => {
                 games: allFiltered
                         }
             case LOADING:
-                return {
+                            return {
                                 ...state,
                                 loading: true
                             }
