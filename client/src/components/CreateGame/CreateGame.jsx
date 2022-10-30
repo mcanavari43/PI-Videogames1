@@ -87,7 +87,6 @@ export default function CreateGame() {
         [e.target.name]: e.target.value,
       })
     );
-    console.log(input);
   }
 
   function handleSelect(e) {
