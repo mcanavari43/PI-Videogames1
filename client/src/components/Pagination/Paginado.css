@@ -18,8 +18,6 @@
     background-color: rgba(240, 224, 0, 0.993);
     font-weight: bolder;
     cursor: pointer;
-    opacity: 92%;
-    
 }
 .button:hover{
     background: #000;

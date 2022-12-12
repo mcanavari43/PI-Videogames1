@@ -4,13 +4,15 @@ const axios = require('axios');
 // Ejemplo: const authRouter = require('./auth.js');
 const { Videogames,Genres} = require('../db')
 const { getAllGames,getGameByName,getDbInfo1 } = require('./controller.js/videogame');
-const { nextTick } = require('process');
 const {API_KEY} = process.env;
 
 const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+router.get('/', function (req,res){
+    res.send("Prueba JEJE")
+})
 router.get('/videogames', async (req,res) => {
     const {name} = req.query
     let allGames = await getAllGames()

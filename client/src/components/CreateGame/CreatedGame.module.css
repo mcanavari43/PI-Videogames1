@@ -7,13 +7,20 @@
 .containerForm{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 2px;
     font-weight: bold;
     background: #bbc2;
     color: #fff;
 }
-textarea{
+
+.genresCreate{
+    flex-direction: row;
+    align-items: center;
+
+}
+.textarea{
     border-radius: 7px;
     max-width: 170px;
     min-width: 170px;
@@ -32,7 +39,7 @@ input{
     font-weight: bold;
     font-size: large;
 }
-form{
+.form{
     margin: 2px;
     padding-top: 25px;
     display: flex;
@@ -45,6 +52,7 @@ form{
 }
 .genresForm{
     padding: 3px;
+    
 }
 
 .createButton{

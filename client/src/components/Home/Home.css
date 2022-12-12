@@ -1,18 +1,22 @@
 
 body{
     background-image: url(https://img.freepik.com/vector-gratis/conjunto-varios-elementos-planos-hud-moderno_74855-7920.jpg?w=900&t=st=1663097759~exp=1663098359~hmac=1052580ea63d921878d21ac7c72a603c9a3a5d6c5a22c5f19744dd47beb55b76);
-    justify-items: stretch;
+    justify-items: center;
     color: #ffff;
     background-size: contain;
-    object-fit: cover;
+    object-fit: fill;
     background-attachment: fixed;
-    overflow-x: hidden;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10 10 10 10;
+    /* overflow-y: scroll;
+    overflow-x: scroll; */
 }
 .header {
     background-image: url(https://img.freepik.com/vector-gratis/conjunto-varios-elementos-planos-hud-moderno_74855-7920.jpg?w=900&t=st=1663097759~exp=1663098359~hmac=1052580ea63d921878d21ac7c72a603c9a3a5d6c5a22c5f19744dd47beb55b76);
     justify-items: stretch;
     color: #ffff;
-    background-size: contain;
+    background-size: fill;
     object-fit: cover;
     margin-top: 50px;
 }
@@ -29,7 +33,6 @@ a:visited{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    opacity: 92%;;
     padding: 2px;
     margin-left: 20%;
     margin-right: 20%;
@@ -43,8 +46,6 @@ a:visited{
 
 .sort .rating {
     display: flex;
-    
-    opacity: 93%;
     flex-direction: column;
     border-radius: 20%;
 }
@@ -56,8 +57,6 @@ a:visited{
 }
 .sort .container-options {
     display: flex;
-  
-    opacity: 93%;
     flex-direction: column;
     align-items: center;
     border-radius: 10%;
@@ -70,7 +69,6 @@ a:visited{
     justify-content: center;
     width: 100%;
     padding: 2%;
-    margin: 2%
 }
 
 .containerCards div:hover {
@@ -88,8 +86,6 @@ a:visited{
 }
 
 .filter{
-    
-    opacity: 93%;
     border-radius: 30px;
     padding: 2px;
     align-items: center;
@@ -222,3 +218,20 @@ a:visited{
 .filter select:hover{
     background: #000;
 }
+.spinner2{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    animation: spin 1s ease infinite;
+    border-left-color: rgb(253, 249, 2);   
+    margin-left: 50%;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

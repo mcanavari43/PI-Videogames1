@@ -20,6 +20,7 @@ export default function Home() {
   let allGames = useSelector((state) => state.games);
   const allGenres = useSelector((state) => state.genres);
   const [currentPage, setCurrentPage] = useState(1);
+  const loading = useSelector((state) => state.loading);
   const [header, setHeader] = useState("Explore all the Games");
   const [order, setOrder] = useState("Watch games");
   const [gamesPerPage, setGamesPerPage] = useState(15);
@@ -32,8 +33,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    dispatch(getAllGames());
     dispatch(getAllGenres());
+    dispatch(getAllGames());
   }, [dispatch]);
   // const gameDetails = useSelector(state => state.gameDetail)
   // useEffect( () => {
@@ -79,6 +80,7 @@ export default function Home() {
   return (
     <div className="header">
       <h1>{header}</h1>
+      {loading && <h1 className="spinner2"></h1>}
       <SearchBar
         className="searchbar"
         setHeader={setHeader}
