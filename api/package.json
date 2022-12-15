@@ -18,13 +18,8 @@
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-<<<<<<< HEAD
     "dotenv": "^8.6.0",
     "express": "^4.18.1",
-=======
-    "dotenv": "^8.2.0",
-    "express": "4.17.1",
->>>>>>> e22598a43e7089c906ff7ef20b6f138ff062e37b
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "pg": "^8.5.1",
