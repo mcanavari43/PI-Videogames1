@@ -11,7 +11,7 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.get('/', function (req,res){
-    res.send("Prueba JEJE")
+    res.send("Test it's server running")
 })
 router.get('/videogames', async (req,res) => {
     const {name} = req.query
@@ -32,7 +32,7 @@ router.get('/videogames', async (req,res) => {
 })
 
 router.get('/genres', async (req,res) => {
-    const apiGenreURL = await axios.get(`postgres://videogames_53ih_user:C8fO3mqLRB7xZ7u1XQp8Paj8oAa8FVFD@dpg-cfa0l4un6mpv49fp9j90-a/videogames_53ih`)
+    const apiGenreURL = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)
     const genresApi = await apiGenreURL.data.results.map(el => el.name)
 
     genresApi.forEach(el => {
