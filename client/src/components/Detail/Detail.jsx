@@ -11,11 +11,11 @@ export default function Detail(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getDetail(props.match.params.id));
+    dispatch(getDetail(props.match.params.username));
     return () => {
       dispatch(getClean());
     };
-  }, [props.match.params.id, dispatch]);
+  }, [props.match.params.username, dispatch]);
 
   const DetailState = useSelector((state) => state.gameDetail);
   return (
@@ -76,11 +76,15 @@ export default function Detail(props) {
           </div>
 
           <h1>About the game:</h1>
-          <p>
-            {DetailState[0].description
-              .replace(/<\/?[^>]+>/gi, "")
-              .replace(/&#39;/g, "'")}
-          </p>
+          {DetailState[0].description.length ? (
+            <p>
+              {DetailState[0].description
+                .replace(/<\/?[^>]+>/gi, "")
+                .replace(/&#39;/g, "'")}
+            </p>
+          ) : (
+            <p>No description</p>
+          )}
         </div>
       ) : (
         <h1 className="spinner"></h1>

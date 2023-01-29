@@ -43,13 +43,16 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    animation: spin 1s ease infinite;
+    animation: spin 1s ease-in infinite;
     border-left-color: rgb(253, 249, 2);
     
 }
 @keyframes spin {
     0% {
       transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg)
     }
     100% {
       transform: rotate(360deg);

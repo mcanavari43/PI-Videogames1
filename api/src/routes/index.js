@@ -32,7 +32,7 @@ router.get('/videogames', async (req,res) => {
 })
 
 router.get('/genres', async (req,res) => {
-    const apiGenreURL = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)
+    const apiGenreURL = await axios.get(`postgres://videogames_53ih_user:C8fO3mqLRB7xZ7u1XQp8Paj8oAa8FVFD@dpg-cfa0l4un6mpv49fp9j90-a/videogames_53ih`)
     const genresApi = await apiGenreURL.data.results.map(el => el.name)
 
     genresApi.forEach(el => {
