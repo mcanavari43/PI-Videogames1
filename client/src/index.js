@@ -9,7 +9,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import dotenv from "dotenv";
 dotenv.config();
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001"
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:4000"
 
 ReactDOM.render(
   <Provider store={store}>

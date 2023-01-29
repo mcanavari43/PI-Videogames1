@@ -1,45 +1,44 @@
 .containerLanding {
-    background-image: url('https://img.freepik.com/vector-gratis/conjunto-objetos-relacionados-videojuegos-neon-estilo-lineal_24908-58670.jpg?w=1060&t=st=1663025386~exp=1663025986~hmac=414af3b38f2b0d965679a83ef29a9be3471768d94c0b26372bb8bb38f1c8a6c4');
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-attachment: inherit; */
-    width: auto;
-    height: 100vh;
-    /* min-height: 100%; */
-    /* overflow-y: hidden;
+  background-image: url("https://img.freepik.com/vector-gratis/conjunto-objetos-relacionados-videojuegos-neon-estilo-lineal_24908-58670.jpg?w=1060&t=st=1663025386~exp=1663025986~hmac=414af3b38f2b0d965679a83ef29a9be3471768d94c0b26372bb8bb38f1c8a6c4");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: inherit; */
+  width: auto;
+  height: 100vh;
+  /* min-height: 100%; */
+  /* overflow-y: hidden;
     overflow-x: none; */
-    margin: auto;
-    display: flex;
-    white-space: none;  
-    justify-content: center;
-    align-items: start;
-    
+  margin: auto;
+  display: flex;
+  white-space: none;
+  justify-content: center;
+  align-items: flex-start;
 }
-.tittleLanding{
-    justify-items: stretch;
-    color: #ffff;
-    background-size: contain;
-    object-fit: cover;
-    margin-top: 50px;
+.tittleLanding {
+  justify-items: stretch;
+  color: #ffff;
+  background-size: contain;
+  object-fit: cover;
+  margin-top: 50px;
 }
 /* .miniContainer {
     background-color: #3cc2;
     display: block;
 } */
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 .boxLanding {
-    background: yellow;
-    font-size: 25px;
-    font-weight: bold;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 25px;
+  background: yellow;
+  font-size: 25px;
+  font-weight: bold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 25px;
 }
 
-.boxLanding:hover{
-    background-color: black;
-    color: #fff;
+.boxLanding:hover {
+  background-color: black;
+  color: #fff;
 }

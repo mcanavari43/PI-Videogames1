@@ -3,13 +3,13 @@ const axios = require('axios');
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
 const { Videogames,Genres} = require('../db')
-const { getAllGames,getGameByName,getDbInfo1 } = require('./controller.js/videogame');
+const { getAllGames,getGameByName,getDbInfo1 } = require('./controller/videogame');
 const {API_KEY} = process.env;
 
 const router = Router();
 
 // Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+// Ejemplo: router.use('/auth', authRouter);S
 router.get('/', function (req,res){
     res.send("Test it's server running")
 })
