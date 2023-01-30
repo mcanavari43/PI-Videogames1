@@ -6,26 +6,22 @@ import { getDetail, getClean } from "../../actions";
 import "./Detail.css";
 
 export default function Detail(props) {
-  console.log(props);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getDetail(props.match.params.username));
+    dispatch(getDetail(props.match.params.id));
     return () => {
       dispatch(getClean());
     };
-  }, [props.match.params.username, dispatch]);
+  }, [dispatch]);
 
   const DetailState = useSelector((state) => state.gameDetail);
   return (
     <div className="detailContainer">
       <div>
-        <a>
-          <Link to="/home">
-            <h1>Return Home</h1>
-          </Link>
-        </a>
+        <Link to="/home">
+          <h1>Return Home</h1>
+        </Link>
       </div>
       {DetailState.length > 0 ? (
         <div className="allbox">

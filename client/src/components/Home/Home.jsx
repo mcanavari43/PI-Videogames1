@@ -36,13 +36,13 @@ export default function Home() {
     dispatch(getAllGenres());
     dispatch(getAllGames());
   }, [dispatch]);
-  // const gameDetails = useSelector(state => state.gameDetail)
-  // useEffect( () => {
-  //         dispatch(getAllGenres())
-  //     {
-  //         dispatch(getAllGames())
-  //     }
-  // },[dispatch])
+  const gameDetails = useSelector((state) => state.gameDetail);
+  useEffect(() => {
+    dispatch(getAllGenres());
+    {
+      dispatch(getAllGames());
+    }
+  }, [dispatch]);
 
   function handleClick(e) {
     e.preventDefault();
